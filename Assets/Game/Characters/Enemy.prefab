@@ -64,6 +64,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2493077358013849470, guid: c38021190475abf409684a241fb8d826, type: 3}
+      propertyPath: m_Speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3305918320296105943, guid: c38021190475abf409684a241fb8d826, type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3875424395516221769, guid: c38021190475abf409684a241fb8d826, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -116,6 +124,10 @@ PrefabInstance:
       propertyPath: health
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 5768557796834836058, guid: c38021190475abf409684a241fb8d826, type: 3}
+      propertyPath: healthPoints
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6384944424257946295, guid: c38021190475abf409684a241fb8d826, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c38021190475abf409684a241fb8d826, type: 3}
@@ -129,6 +141,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3875424395516221769, guid: c38021190475abf409684a241fb8d826, type: 3}
   m_PrefabInstance: {fileID: 5225683891360444480}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &-4426606131891251569
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9028906068941842697}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &-5433142789566027093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,17 +167,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a4bff27a3237644a80f197f064bdd2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &-4426606131891251569
-CapsuleCollider:
+--- !u!114 &5325345918988096101
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9028906068941842697}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3bfaa1f835739643a5f9086901baddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseDistance: 5
+  suspicionTime: 5
+  patrolPath: {fileID: 0}
+  waypointTolerance: 1
+  waypointDwellTime: 5
