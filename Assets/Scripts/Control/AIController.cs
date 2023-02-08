@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 using RPG.Control;
 using RPG.Combat;
 using RPG.Core;
@@ -14,15 +15,22 @@ namespace RPG.Control
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float waypointTolerance = 1f;
         [SerializeField] float waypointDwellTime = 5f;
+        // [SerializeField] float attackSpeed = 5f;
+        // [SerializeField] float patrolSpeed = 2f;
+        [Range(0,1)]
+        [SerializeField] float patrolSpeedFraction = 0.2f;
 
         Fighter fighter;
         Health health;
         GameObject player;
         Mover mover;
         Vector3 guardPosition;
+        //NavMeshAgent navMeshAgent;
+
         float timeSinceLastSawPlayer = Mathf.Infinity;
         float timeSinceArrivedAtWaypoint = Mathf.Infinity;
         int currentWaypointIndex = 0;
+    
         
 
         private void Start()
@@ -31,6 +39,7 @@ namespace RPG.Control
             player = GameObject.FindWithTag("Player");
             health = GetComponent<Health>();
             mover = GetComponent<Mover>();
+            //navMeshAgent = GetComponent<NavMeshAgent>();
 
             guardPosition = transform.position;
         }
@@ -66,6 +75,7 @@ namespace RPG.Control
 
         private void PatrolBehaviour()
         {
+            //navMeshAgent.speed = patrolSpeed;
             Vector3 nextPosition = guardPosition;
 
             if (patrolPath != null)
@@ -79,7 +89,7 @@ namespace RPG.Control
             }
             if (timeSinceArrivedAtWaypoint > waypointDwellTime)
             {
-                mover.StartMoveAction(nextPosition);
+                mover.StartMoveAction(nextPosition, patrolSpeedFraction);
             }
             
         }
@@ -107,6 +117,7 @@ namespace RPG.Control
 
         private void AttackBehaviour()
         {
+            //navMeshAgent.speed = attackSpeed;
             timeSinceLastSawPlayer = 0;
             fighter.Attack(player);
         }
