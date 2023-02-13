@@ -10,6 +10,7 @@ namespace RPG.Movement
     {
         [SerializeField] Transform target;
         [SerializeField] float maxSpeed = 6f;
+        [SerializeField] float acceptanceRadius = 1.0f;
 
         NavMeshAgent navMeshAgent;
         Health health;
@@ -25,6 +26,11 @@ namespace RPG.Movement
         {
             navMeshAgent.enabled = !health.IsDead();
             UpdateAnimator();
+
+            if (Vector3.Distance(transform.position, navMeshAgent.destination) < acceptanceRadius)
+            {
+                navMeshAgent.SetDestination(transform.position);
+            }
         }
 
         public void StartMoveAction(Vector3 destination, float speedFraction)

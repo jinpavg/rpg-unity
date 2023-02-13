@@ -6,6 +6,8 @@ namespace RPG.Core
     public class Health : MonoBehaviour, ISaveable
     {
         [SerializeField] float healthPoints = 100f;
+        // temporary maxHealthPoints to be rewritten by stats
+        [SerializeField] float maxHealthPoints = 100f;
 
         bool isDead = false;
 
@@ -22,6 +24,12 @@ namespace RPG.Core
             {
                 Die();
             }
+        }
+
+        // will be written once stats exist
+        public float GetPercentage()
+        {
+            return 100 * healthPoints / maxHealthPoints;
         }
 
         private void Die()

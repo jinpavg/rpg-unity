@@ -2,10 +2,11 @@ using UnityEngine;
 using RPG.Movement;
 using RPG.Core;
 using System;
+using RPG.Saving;
 
 namespace RPG.Combat
 {
-    public class Fighter : MonoBehaviour, IAction
+    public class Fighter : MonoBehaviour, IAction, ISaveable
     {
         [SerializeField] float timeBetweenAttacks = 1f;
         [SerializeField] Transform rightHandTransform = null;
@@ -17,7 +18,10 @@ namespace RPG.Combat
         Weapon currentWeapon = null;
 
         private void Start() {
-            EquipWeapon(defaultWeapon);
+            if (currentWeapon == null)
+            {
+                EquipWeapon(defaultWeapon);
+            }
         }
 
         public void EquipWeapon(Weapon weapon)
@@ -114,5 +118,17 @@ namespace RPG.Combat
             GetComponent<Animator>().SetTrigger("stopAttack");
         }
 
+        public object CaptureState()
+        {
+            return currentWeapon.name;
+        }
+
+        public void RestoreState(object state)
+        {
+            string weaponName = (string) state;
+            // why is this trying to get to RPG.Resources? Fix this once I have stats
+            Weapon weapon = UnityEngine.Resources.Load<Weapon>(weaponName);
+            EquipWeapon(weapon);
+        }
     }
 }
