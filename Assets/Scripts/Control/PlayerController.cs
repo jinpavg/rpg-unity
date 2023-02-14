@@ -10,6 +10,7 @@ namespace RPG.Control
     {   
         Health health;
 
+        // alex, don't keep it this way -- have the cursor somewhere else
         enum CursorType
         {
             None, 
