@@ -12,7 +12,7 @@ namespace RPG.Core
 
         bool isDead = false;
         
-        // temporary way to aggrevate enemy
+        // temporary way to aggravate enemy
         AIController enemyController = null;
 
         public bool IsDead()
@@ -24,12 +24,12 @@ namespace RPG.Core
         {
             healthPoints = Mathf.Max(healthPoints - damage, 0);
 
-            // temporary way to aggrevate enemy
+            // temporary way to aggravate enemy
             enemyController = GetComponent<AIController>();
 
             if (enemyController != null)
             {
-                enemyController.Aggrevate();
+                enemyController.Aggravate();
             }
     
             if (healthPoints == 0)
@@ -51,6 +51,12 @@ namespace RPG.Core
             GetComponent<Animator>().SetTrigger("die");
             GetComponent<ActionScheduler>().CancelCurrentAction();
         }
+
+        // hack for health pickup
+        public void Heal(float healthToRestore)
+         {
+             healthPoints = Mathf.Min(healthPoints + healthToRestore, maxHealthPoints);
+         }
 
         public object CaptureState()
         {
