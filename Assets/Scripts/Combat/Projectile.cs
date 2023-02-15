@@ -45,6 +45,13 @@ namespace RPG.Combat
             Destroy(gameObject, maxLifeTime);
         }
 
+        // for purposes of Projectile Audio
+        public Health GetTarget()
+        {
+            return target;
+        }
+
+
         private Vector3 GetAimLocation()
         {
             CapsuleCollider targetCapsule = target.GetComponent<CapsuleCollider>();

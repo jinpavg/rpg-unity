@@ -13,7 +13,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2351612751299717288, guid: 567dfe6c16e3ed14abb9712973b3cf0f, type: 3}
       propertyPath: m_Name
-      value: ArrowProjectile Variant
+      value: Red_Arrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 2903137248352103664, guid: 567dfe6c16e3ed14abb9712973b3cf0f, type: 3}
+      propertyPath: startingFreq
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 4674280467615528381, guid: 567dfe6c16e3ed14abb9712973b3cf0f, type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b

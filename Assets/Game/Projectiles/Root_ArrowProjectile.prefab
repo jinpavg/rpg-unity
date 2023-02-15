@@ -160,6 +160,7 @@ GameObject:
   - component: {fileID: 6510414752344004119}
   - component: {fileID: 197942261695228372}
   - component: {fileID: 3679311764114613190}
+  - component: {fileID: 2903137248352103664}
   m_Layer: 0
   m_Name: Root_ArrowProjectile
   m_TagString: Untagged
@@ -216,6 +217,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1, z: 0.55}
   m_Center: {x: 0, y: 0, z: 0.4}
+--- !u!114 &2903137248352103664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2351612751299717288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70622e767e959448dbb38ebbe614b8ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingFreq: 200
 --- !u!1001 &2719920438972296679
 PrefabInstance:
   m_ObjectHideFlags: 0

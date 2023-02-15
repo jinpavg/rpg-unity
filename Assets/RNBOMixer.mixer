@@ -1,0 +1,181 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-8345823927533838964
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 8c4910f7f6d3a49a7981887548a9896f
+  m_EffectName: SFX Reverb
+  m_MixLevel: aac3a9c3ee12148a9ba397eab3d80111
+  m_Parameters:
+  - m_ParameterName: Dry Level
+    m_GUID: 3e10b241df3e24370b90cdbad074289b
+  - m_ParameterName: Room
+    m_GUID: 09ca38f0b787e47e2bbb6268a18f7aaf
+  - m_ParameterName: Room HF
+    m_GUID: 2f38058de67aa47c5aad3cf17e0de3e7
+  - m_ParameterName: Decay Time
+    m_GUID: 244dfd1d3027a4b19bc3ceb0b6f0f041
+  - m_ParameterName: Decay HF Ratio
+    m_GUID: 745476b78938e4a6db22edb8bfb1914f
+  - m_ParameterName: Reflections
+    m_GUID: 9dba71b69cf174e9aa7149aeec0b4626
+  - m_ParameterName: Reflect Delay
+    m_GUID: b84d2fbb700bc42debdd8bc8cc45ced7
+  - m_ParameterName: Reverb
+    m_GUID: e48f3b4400f7845f49b7388a64bd8bcb
+  - m_ParameterName: Reverb Delay
+    m_GUID: 939855a61256b48468bf730befcffdba
+  - m_ParameterName: Diffusion
+    m_GUID: 7a7261b7dc1904b7882735fb6f1020b0
+  - m_ParameterName: Density
+    m_GUID: 6b83d507ac337417d9ae7780441f9f29
+  - m_ParameterName: HF Reference
+    m_GUID: fbc8a63d4c30f4fb78baff9c51b1a260
+  - m_ParameterName: Room LF
+    m_GUID: 1efb509edea444c1094ea804c2c0919e
+  - m_ParameterName: LF Reference
+    m_GUID: da90d02d57cee4cebb94fe27ddde7bed
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &-6754903119788828337
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: c20c81b2b29fe4cc3a7896a90cf902b8
+  m_EffectName: AlkarraSound
+  m_MixLevel: f2946f266b9d1487c92fc4a901f34322
+  m_Parameters:
+  - m_ParameterName: 'Instance Index '
+    m_GUID: f26b1f0a469ed47dea27898e1915712d
+  - m_ParameterName: karplusMetroOn
+    m_GUID: db40e84e1da6d4076a10b59c9680fd5f
+  - m_ParameterName: karplusMetroRat
+    m_GUID: eab5dde189c1a4b40bd5742ef60faa93
+  - m_ParameterName: waveshapeMetroO
+    m_GUID: 7b27dc773be3f400795e91af525b0b83
+  - m_ParameterName: waveshapeMetroS
+    m_GUID: 892b317f3cebf4609872db25c4da3a0b
+  - m_ParameterName: stringSync
+    m_GUID: 6be2a24bacd6d4dd493ce592779f2600
+  - m_ParameterName: waveshapeFreqSt
+    m_GUID: a53994e847ec34ff693ed5da3c3fe50f
+  - m_ParameterName: waveshapeGain
+    m_GUID: eb8dab13a782c4fd3b389dff4ff50237
+  - m_ParameterName: counterStep
+    m_GUID: aa5359f8c3ca042728260fc59b34ccf8
+  - m_ParameterName: stringOne
+    m_GUID: 1be3522e133344e8f8f9a200562abbef
+  - m_ParameterName: stringTwo
+    m_GUID: 03a9adce75f13434685b7ba65a15ca7c
+  - m_ParameterName: gain
+    m_GUID: c39ac23f154c346f0b7c6222010636dd
+  - m_ParameterName: rotate
+    m_GUID: c6a9e29370ccf4279877f40d268f9904
+  - m_ParameterName: dampen
+    m_GUID: 92842af390f654b97818880fa7beb9a4
+  - m_ParameterName: decay
+    m_GUID: 56694464bf20d483b886247f46c6c1ed
+  - m_ParameterName: footfallOn
+    m_GUID: 78caac29f39d649a4b9fbfbfd7396454
+  - m_ParameterName: samplePlaybackR
+    m_GUID: 30589d5fa9c364a0daa8b8bb1940bd82
+  - m_ParameterName: footfallRate
+    m_GUID: d2954e59d4aba4049850fd4203fea0b5
+  - m_ParameterName: sampleLoop
+    m_GUID: 2b7171ff1eb4a49d8a72db54ca31b734
+  - m_ParameterName: sampleGain
+    m_GUID: 8376a969dd9554e3585927168a124831
+  - m_ParameterName: footfallGain
+    m_GUID: 08d8d941763bc4a8e987db5f70dc60ad
+  - m_ParameterName: delayL/delaytim
+    m_GUID: f3a7fe5b035fa4c138b68cacc472bb1c
+  - m_ParameterName: delayL/feedback
+    m_GUID: 6c6fbd46b21e146ef8f84611d2aadb35
+  - m_ParameterName: delayR/delaytim
+    m_GUID: 529818d43127d48a4b13a3a17818b33e
+  - m_ParameterName: delayR/feedback
+    m_GUID: ea3ac31a554a14b7d84d80dc84f908c6
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!241 &24100000
+AudioMixerController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RNBOMixer
+  m_OutputGroup: {fileID: 0}
+  m_MasterGroup: {fileID: 24300002}
+  m_Snapshots:
+  - {fileID: 24500006}
+  m_StartSnapshot: {fileID: 24500006}
+  m_SuspendThreshold: -80
+  m_EnableSuspend: 0
+  m_UpdateMode: 0
+  m_ExposedParameters: []
+  m_AudioMixerGroupViews:
+  - guids:
+    - ebaa21aa5ba98487abad34c9f97789c0
+    name: View
+  m_CurrentViewIndex: 0
+  m_TargetSnapshot: {fileID: 24500006}
+--- !u!243 &24300002
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Master
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: ebaa21aa5ba98487abad34c9f97789c0
+  m_Children: []
+  m_Volume: f8347ab0ff52a43e59b990f5d7ed9e6a
+  m_Pitch: 398256a970b784c449968d7d8cfb7be0
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -6754903119788828337}
+  - {fileID: 24400004}
+  - {fileID: -8345823927533838964}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &24400004
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 6c62d4cb665a64f7fb1d3da5e45e66bf
+  m_EffectName: Attenuation
+  m_MixLevel: 89da3f94bc8404343b422b5c51f68248
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!245 &24500006
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Snapshot
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: e9b238f606bed438f8ecc6a3e6637391
+  m_FloatValues:
+    09ca38f0b787e47e2bbb6268a18f7aaf: -3621
+    3e10b241df3e24370b90cdbad074289b: 0
+    e48f3b4400f7845f49b7388a64bd8bcb: 1452
+    f26b1f0a469ed47dea27898e1915712d: 1
+    244dfd1d3027a4b19bc3ceb0b6f0f041: 3.8
+  m_TransitionOverrides: {}
