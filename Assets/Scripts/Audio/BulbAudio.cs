@@ -6,7 +6,7 @@ namespace RPG.Audio
 {
     public class BulbAudio : MonoBehaviour
     {
-        int pluginKey = 1; //the value we set the "Instance Index" param to in the mixer
+        const int pluginKey = 1; //the value we set the "Instance Index" param to in the mixer
         AlkarraSoundHelper helper;
         GameObject player;
         // Start is called before the first frame update

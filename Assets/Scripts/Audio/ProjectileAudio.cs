@@ -9,7 +9,7 @@ namespace RPG.Audio
 {
     public class ProjectileAudio : MonoBehaviour
     {
-        int pluginKey = 1; //the value we set the "Instance Index" param to in the mixer
+        const int pluginKey = 1; //the value we set the "Instance Index" param to in the mixer
         AlkarraSoundHelper helper;
         Projectile thisProjectile;
         Vector3 spawnPosition;
