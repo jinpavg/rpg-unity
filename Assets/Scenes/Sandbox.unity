@@ -5046,6 +5046,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -7.0999756
       objectReference: {fileID: 0}
+    - target: {fileID: 181590742286537069, guid: 024b1deeaf313154eb4bc87c2b85ed08, type: 3}
+      propertyPath: Pan2D
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1426162550636963633, guid: 024b1deeaf313154eb4bc87c2b85ed08, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -7.0999756
@@ -5114,6 +5118,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 21.545376
       objectReference: {fileID: 0}
+    - target: {fileID: 4229879831518010692, guid: 024b1deeaf313154eb4bc87c2b85ed08, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4229879831518010715, guid: 024b1deeaf313154eb4bc87c2b85ed08, type: 3}
       propertyPath: m_LocalPosition.x
       value: 93.23329
@@ -5142,6 +5150,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.06821068
       objectReference: {fileID: 0}
+    - target: {fileID: 4229879832122146543, guid: 024b1deeaf313154eb4bc87c2b85ed08, type: 3}
+      propertyPath: m_DrawHalo
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6103657697422756128, guid: 024b1deeaf313154eb4bc87c2b85ed08, type: 3}
       propertyPath: m_LocalPosition.x
       value: 87.2
@@ -5150,6 +5162,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 32.7
       objectReference: {fileID: 0}
+    - target: {fileID: 6457394154158715922, guid: 024b1deeaf313154eb4bc87c2b85ed08, type: 3}
+      propertyPath: rnboClip
+      value: 
+      objectReference: {fileID: 8300000, guid: caf35e1c2bf9b4e10bf344160076f786, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 024b1deeaf313154eb4bc87c2b85ed08, type: 3}
 --- !u!4 &5099282798354258757
