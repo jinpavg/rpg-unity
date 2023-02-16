@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef5cb2ff8ec830544ad8c1d4a804bc2d, type: 3}
+  m_Name: Spanner
+  m_EditorClassIdentifier: 
+  equippedPrefab: {fileID: 7254236000205439500, guid: 097b721c298204f00aa7bf94b485d3f4, type: 3}
+  animatorOverride: {fileID: 22100000, guid: 50cb96bbfa5e9b9449045e61c83a528d, type: 2}
+  weaponRange: 2
+  weaponDamage: 10
+  isRightHanded: 1
+  projectile: {fileID: 0}

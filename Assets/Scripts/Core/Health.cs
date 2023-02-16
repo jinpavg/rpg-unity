@@ -48,7 +48,7 @@ namespace RPG.Core
         {
             if (isDead) return;
             isDead = true;
-            GetComponent<Animator>().SetTrigger("die");
+            GetComponentInChildren<Animator>().SetTrigger("die");
             GetComponent<ActionScheduler>().CancelCurrentAction();
         }
 

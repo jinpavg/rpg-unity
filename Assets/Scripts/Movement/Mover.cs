@@ -61,7 +61,7 @@ namespace RPG.Movement
             float speed = localVelocity.z;
 
             // pass speed to the animator
-            GetComponent<Animator>().SetFloat("ForwardSpeed", speed);
+            GetComponentInChildren<Animator>().SetFloat("ForwardSpeed", speed);
 
         }
 

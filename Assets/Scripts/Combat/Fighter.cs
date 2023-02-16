@@ -27,7 +27,7 @@ namespace RPG.Combat
         public void EquipWeapon(Weapon weapon)
         {
             currentWeapon = weapon;
-            Animator animator = GetComponent<Animator>();
+            Animator animator = GetComponentInChildren<Animator>();
             weapon.Spawn(rightHandTransform, leftHandTransform, animator);
         }
 
@@ -108,14 +108,14 @@ namespace RPG.Combat
 
         private void TriggerAttack()
         {
-            GetComponent<Animator>().ResetTrigger("stopAttack");
-            GetComponent<Animator>().SetTrigger("attack");
+            GetComponentInChildren<Animator>().ResetTrigger("stopAttack");
+            GetComponentInChildren<Animator>().SetTrigger("attack");
         }
 
         private void StopAttack()
         {
-            GetComponent<Animator>().ResetTrigger("attack");
-            GetComponent<Animator>().SetTrigger("stopAttack");
+            GetComponentInChildren<Animator>().ResetTrigger("attack");
+            GetComponentInChildren<Animator>().SetTrigger("stopAttack");
         }
 
         public object CaptureState()
