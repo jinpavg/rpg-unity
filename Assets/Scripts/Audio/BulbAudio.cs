@@ -20,17 +20,26 @@ namespace RPG.Audio
         // Update is called once per frame
         void Update()
         {
-            // this is a total hack, we should not be checking for this every frame
-            if (Vector3.Distance(player.transform.position, transform.position) < 10f)
+            if (!shouldInteractWithPlayer) return;
+            float playbackSpeedMultiplicationFactor = Vector3.Distance(player.transform.position, transform.position);
+            helper.SetParamValue(19, 1 + (playbackSpeedMultiplicationFactor * 0.1));
+        }
+
+        // this doesn't seem to quite do it
+        void OnCollisionEnter(Collision other) {
+                if (other.gameObject == player)
+                {
+                    shouldInteractWithPlayer = true; 
+                }
+                           
+        }
+        void OnCollisionExit(Collision other) {
+            if (other.gameObject == player)
             {
-                helper.SetParamValue(20, 100); // delayL
-                helper.SetParamValue(22, 50); // delayR
+                shouldInteractWithPlayer = false;
             }
-            else 
-            {
-                helper.SetParamValue(20, 200); // delayL
-                helper.SetParamValue(22, 400); // delayR
-            }
+            
+        
         }
     }
 }
