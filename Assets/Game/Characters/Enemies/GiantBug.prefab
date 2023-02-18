@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 8e20cc7e-2492-4ad5-b9d4-df2328f385d8
       objectReference: {fileID: 0}
+    - target: {fileID: 2493077358013849465, guid: c38021190475abf409684a241fb8d826, type: 3}
+      propertyPath: maxSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2493077358013849470, guid: c38021190475abf409684a241fb8d826, type: 3}
       propertyPath: m_Speed
       value: 1
@@ -103,6 +107,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5768557796834836058, guid: c38021190475abf409684a241fb8d826, type: 3}
+      propertyPath: healthPoints
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768557796834836058, guid: c38021190475abf409684a241fb8d826, type: 3}
+      propertyPath: maxHealthPoints
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c38021190475abf409684a241fb8d826, type: 3}
 --- !u!1 &3664557425215520314 stripped
@@ -110,37 +122,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3875424395516221769, guid: c38021190475abf409684a241fb8d826, type: 3}
   m_PrefabInstance: {fileID: 509850570318489459}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1076926930849351991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3664557425215520314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3bfaa1f835739643a5f9086901baddc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chaseDistance: 5
-  suspicionTime: 5
-  aggroCooldownTime: 5
-  patrolPath: {fileID: 0}
-  waypointTolerance: 1
-  waypointDwellTime: 5
-  patrolSpeedFraction: 0.2
---- !u!114 &4262550430560002285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3664557425215520314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a4bff27a3237644a80f197f064bdd2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &67348200
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -170,6 +151,37 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.12
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1076926930849351991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3664557425215520314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3bfaa1f835739643a5f9086901baddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseDistance: 10
+  suspicionTime: 5
+  aggroCooldownTime: 10
+  patrolPath: {fileID: 0}
+  waypointTolerance: 1
+  waypointDwellTime: 5
+  patrolSpeedFraction: 0.2
+--- !u!114 &4262550430560002285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3664557425215520314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a4bff27a3237644a80f197f064bdd2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4929640128431088530 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4862414184903099617, guid: c38021190475abf409684a241fb8d826, type: 3}

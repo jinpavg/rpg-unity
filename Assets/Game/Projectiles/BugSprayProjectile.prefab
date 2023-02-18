@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2874519663392472039, guid: c66a167f90dfc8a4f88b26ea4c583199, type: 3}
+      propertyPath: isPoison
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2874519663392472039, guid: c66a167f90dfc8a4f88b26ea4c583199, type: 3}
+      propertyPath: startingFreq
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 423869375822360040, guid: c66a167f90dfc8a4f88b26ea4c583199, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.ctime0
       value: 193
@@ -50,6 +58,14 @@ PrefabInstance:
     - target: {fileID: 423869375822360040, guid: c66a167f90dfc8a4f88b26ea4c583199, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key2.r
       value: 0.9772253
+      objectReference: {fileID: 0}
+    - target: {fileID: 1737628642881415249, guid: c66a167f90dfc8a4f88b26ea4c583199, type: 3}
+      propertyPath: isHoming
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1737628642881415249, guid: c66a167f90dfc8a4f88b26ea4c583199, type: 3}
+      propertyPath: maxLifeTime
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3453439209561515595, guid: c66a167f90dfc8a4f88b26ea4c583199, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b

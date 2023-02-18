@@ -9,6 +9,7 @@ namespace RPG.Audio
         const int pluginKey = 1; //the value we set the "Instance Index" param to in the mixer
         AlkarraSoundHelper helper;
         GameObject player;
+        bool shouldInteractWithPlayer = false;
         // Start is called before the first frame update
         void Start()
         {

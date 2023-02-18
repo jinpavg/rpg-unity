@@ -6,9 +6,11 @@ namespace RPG.SceneManagement
     public class Fader : MonoBehaviour
     {
         CanvasGroup canvasGroup;
+        //GameObject sceneFader;
 
         private void Awake()
         {
+            //GameObject sceneFader = GameObject.FindWithTag("SceneFader");
             canvasGroup = GetComponent<CanvasGroup>();
         }
 

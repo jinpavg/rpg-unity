@@ -133,7 +133,7 @@ namespace RPG.Control
         private bool IsAggravated()
         {
             float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
-            return distanceToPlayer < chaseDistance || timeSinceAggravated <aggroCooldownTime;
+            return distanceToPlayer < chaseDistance || timeSinceAggravated < aggroCooldownTime;
         }
 
         // private bool InAttackRangeOfPlayer()

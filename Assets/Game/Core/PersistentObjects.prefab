@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9299dc078469f4bb692892ce947e2e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rnboClip: {fileID: 8300000, guid: caf35e1c2bf9b4e10bf344160076f786, type: 3}
+  background: {fileID: 8300000, guid: caf35e1c2bf9b4e10bf344160076f786, type: 3}
 --- !u!1 &3934106093282020663
 GameObject:
   m_ObjectHideFlags: 0

@@ -47,17 +47,17 @@ namespace RPG.Audio
 
         public void FootfallOn(float isMoving)
         {
-            helper.SetParamValue(14, isMoving);
+            helper.SetParamValue(18, isMoving);
         }
 
         public void FootfallGain(float gain)
         {
-            helper.SetParamValue(19, gain);
+            helper.SetParamValue(23, gain);
         }
 
         public void FootfallRate(float rate)
         {
-            helper.SetParamValue(16, rate);
+            helper.SetParamValue(20, rate);
         }
 
     }

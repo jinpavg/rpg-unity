@@ -6,9 +6,9 @@ namespace RPG.Audio
 {
     public class CoreAudio : MonoBehaviour
     {
-        int pluginKey = 1; //the value we set the "Instance Index" param to in the mixer
+        const int pluginKey = 1; //the value we set the "Instance Index" param to in the mixer
         AlkarraSoundHelper helper;
-        public AudioClip rnboClip;
+        public AudioClip background;
         System.UInt32 myInport;
 
 
@@ -16,19 +16,19 @@ namespace RPG.Audio
         void Start()
         {
             helper = AlkarraSoundHelper.FindById(pluginKey);
-            helper.SetParamValue(0, 0); // turning off karplusMetroOn
-            helper.SetParamValue(1, 400); // setting initial metro
+            helper.SetParamValue(3, 0); // turning off karplusMetroOn
+            helper.SetParamValue(4, 400); // setting initial metro
             //helper.SetParamValue(20, 1); // setting delayL to 1 (overriden by bulb)
             //helper.SetParamValue(22, 1); // setting delayR to 1 (overriden by bulb)
-            helper.SetParamValue(4, 1); // stringsync
-            helper.SetParamValue(11, 1); // rotate
-            helper.SetParamValue(17, 1); // loop sample
+            helper.SetParamValue(8, 1); // stringsync
+            helper.SetParamValue(15, 1); // rotate
+            helper.SetParamValue(21, 1); // loop sample
 
-            if (rnboClip)
+            if (background)
             {
-                float[] samples = new float[rnboClip.samples * rnboClip.channels];
-                rnboClip.GetData(samples, 0);
-                helper.LoadDataRef("sample", samples, rnboClip.channels, rnboClip.frequency);
+                float[] samples = new float[background.samples * background.channels];
+                background.GetData(samples, 0);
+                helper.LoadDataRef("sample", samples, background.channels, background.frequency);
             }
 
             myInport = AlkarraSoundHelper.Tag("playSample");

@@ -18,6 +18,15 @@ namespace RPG.Resources
 
         private void Update() {
             GetComponent<Text>().text = String.Format("{0:0}%", health.GetPercentage());
+            //Color textColor = GetComponent<Text>().color;
+            if (health.GetPercentage() < 50)
+            {
+                GetComponent<Text>().color = Color.red;
+            }
+            else
+            {
+                GetComponent<Text>().color = Color.green;
+            }
         }
     }
 
