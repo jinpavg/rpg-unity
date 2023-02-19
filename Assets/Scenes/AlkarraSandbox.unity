@@ -275,6 +275,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoryTrigger (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3125301054773636806, guid: 836df510fec9c416b98fe75ca68fa807, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3125301054773636807, guid: 836df510fec9c416b98fe75ca68fa807, type: 3}
       propertyPath: textPromptPrefab
       value: 
@@ -459,10 +463,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 149190146990741045, guid: b5ad04227fbdd4a939425ee78621ebac, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2477663374668472665, guid: b5ad04227fbdd4a939425ee78621ebac, type: 3}
       propertyPath: m_Name
       value: HealthPickup
@@ -576,6 +576,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoryTrigger (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3125301054773636806, guid: 836df510fec9c416b98fe75ca68fa807, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3125301054773636807, guid: 836df510fec9c416b98fe75ca68fa807, type: 3}
       propertyPath: storyDisplayTime
       value: 5
@@ -646,6 +650,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoryTrigger (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3125301054773636806, guid: 836df510fec9c416b98fe75ca68fa807, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3125301054773636807, guid: 836df510fec9c416b98fe75ca68fa807, type: 3}
       propertyPath: textPromptPrefab
       value: 
@@ -666,7 +674,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2111715842}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: StoryTriggers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -803,6 +811,10 @@ PrefabInstance:
     - target: {fileID: 3125301054773636806, guid: 836df510fec9c416b98fe75ca68fa807, type: 3}
       propertyPath: m_Name
       value: StoryTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3125301054773636806, guid: 836df510fec9c416b98fe75ca68fa807, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 836df510fec9c416b98fe75ca68fa807, type: 3}

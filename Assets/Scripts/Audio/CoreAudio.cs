@@ -23,6 +23,7 @@ namespace RPG.Audio
             helper.SetParamValue(8, 1); // stringsync
             helper.SetParamValue(15, 1); // rotate
             helper.SetParamValue(21, 1); // loop sample
+            helper.SetParamValue(19, 1); // start sample playback rate at 1
 
             if (background)
             {

@@ -21,15 +21,22 @@ namespace RPG.Audio
         void Update()
         {
             if (!shouldInteractWithPlayer) return;
-            float playbackSpeedMultiplicationFactor = Vector3.Distance(player.transform.position, transform.position);
-            helper.SetParamValue(19, 1 + (playbackSpeedMultiplicationFactor * 0.1));
+            float distanceToBulb = Vector3.Distance(player.transform.position, transform.position);
+            float bulbRadius = GetComponent<CapsuleCollider>().radius;
+            if (distanceToBulb < bulbRadius)
+            {
+                float playbackSpeedMultiplicationFactor = (bulbRadius - distanceToBulb) * 0.01f;
+                helper.SetParamValue(19, 1 + playbackSpeedMultiplicationFactor); // playback speed for "sample"
+            }
+            
         }
 
         // this doesn't seem to quite do it
         void OnCollisionEnter(Collision other) {
                 if (other.gameObject == player)
                 {
-                    shouldInteractWithPlayer = true; 
+                    shouldInteractWithPlayer = true;
+                    Debug.Log("collide"); 
                 }
                            
         }
@@ -37,6 +44,7 @@ namespace RPG.Audio
             if (other.gameObject == player)
             {
                 shouldInteractWithPlayer = false;
+                helper.SetParamValue(19, 1); // playback speed for "sample"
             }
             
         
