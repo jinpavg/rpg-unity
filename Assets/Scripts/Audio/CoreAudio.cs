@@ -7,7 +7,9 @@ namespace RPG.Audio
     public class CoreAudio : MonoBehaviour
     {
         const int pluginKey = 1; //the value we set the "Instance Index" param to in the mixer
+        const int orbsKey = 2;
         AlkarraSoundHelper helper;
+        AlkarraOrbsHelper orbsHelper;
         public AudioClip background;
         System.UInt32 myInport;
 
@@ -16,6 +18,8 @@ namespace RPG.Audio
         void Start()
         {
             helper = AlkarraSoundHelper.FindById(pluginKey);
+            orbsHelper = AlkarraOrbsHelper.FindById(orbsKey);
+
             helper.SetParamValue(3, 0); // turning off karplusMetroOn
             helper.SetParamValue(4, 400); // setting initial metro
             //helper.SetParamValue(20, 1); // setting delayL to 1 (overriden by bulb)
@@ -24,6 +28,8 @@ namespace RPG.Audio
             helper.SetParamValue(15, 1); // rotate
             helper.SetParamValue(21, 1); // loop sample
             helper.SetParamValue(19, 1); // start sample playback rate at 1
+
+            orbsHelper.SetParamValue(5, 0); // start with no orbs
 
             if (background)
             {

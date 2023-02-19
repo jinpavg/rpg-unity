@@ -31,7 +31,7 @@ namespace RPG.Audio
             
         }
 
-        // this doesn't seem to quite do it
+
         void OnCollisionEnter(Collision other) {
                 if (other.gameObject == player)
                 {
