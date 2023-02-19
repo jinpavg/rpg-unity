@@ -2,21 +2,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using RPG.Core;
 using RPG.Audio;
 
 namespace RPG.Combat
 {
-    
-    public class HealthPickup : MonoBehaviour {
-        [SerializeField] float healthToRestore = 50;
-        [SerializeField] float respawnTime = 10;
+
+    public class SpellPickup : MonoBehaviour
+    {
+        [SerializeField] Weapon weaponToEquip = null;
+        [SerializeField] float respawnTime = 5;
 
         private void OnTriggerEnter(Collider other) {
             if (other.tag == "Player")
             {
-                other.GetComponent<Health>().Heal(healthToRestore);
-                GetComponent<BulbAudio>().AddHealthSound();
+                other.GetComponent<Fighter>().EquipWeapon(weaponToEquip);
+                GetComponent<SpellPickupAudio>().SpellPickupSound();
                 StartCoroutine(HideForSeconds(respawnTime));
             }
         }
@@ -28,6 +28,8 @@ namespace RPG.Combat
             ShowPickup(true);
         }
 
+
+
         private void ShowPickup(bool shouldShow)
         {
             GetComponent<Collider>().enabled = shouldShow;
@@ -36,6 +38,6 @@ namespace RPG.Combat
                 child.gameObject.SetActive(shouldShow);
             }
         }
-        
     }
 }
+

@@ -20,6 +20,7 @@ namespace RPG.Audio
             FootfallOn(1f);
             FootfallRate(140f);
 
+
             // helper.ParameterChangedEvent += (object sender, AlkarraSoundHelper.ParameterChangedEventArgs args) => {
             //     Debug.LogFormat("got param change {0} {1} {2}", args.Index, args.Value, args.Time);
             // };

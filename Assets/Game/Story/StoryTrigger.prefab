@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 3125301054773636801}
   - component: {fileID: 3125301054773636800}
   - component: {fileID: 3125301054773636807}
-  m_Layer: 0
+  - component: {fileID: 3125301054019068062}
+  m_Layer: 2
   m_Name: StoryTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3125301054773636806}
-  m_LocalRotation: {x: -0, y: 0.15952086, z: -0, w: 0.9871946}
+  m_LocalRotation: {x: 0, y: 0.15951939, z: 0, w: 0.98719484}
   m_LocalPosition: {x: 101.34, y: 2.42, z: -94.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -60,3 +61,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textPromptPrefab: {fileID: 719664162382401467, guid: cb20239bd223f45f2af8868399e20259, type: 3}
   storyDisplayTime: 3
+--- !u!114 &3125301054019068062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3125301054773636806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea9374b509b70f4bba37e4a2ca8cf00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueIdentifier: f6f9272b-e0ba-4874-9ec1-e430d092f384

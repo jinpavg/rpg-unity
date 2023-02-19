@@ -170,6 +170,21 @@ MonoBehaviour:
   waypointTolerance: 1
   waypointDwellTime: 5
   patrolSpeedFraction: 0.2
+--- !u!114 &1403266549569866063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3664557425215520314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b273eb60aed42d28c611ab2b7b3806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitSound: {fileID: 8300000, guid: e9938ed82ff5c4f89a1bd8e246aa7884, type: 3}
+  whichInport: 3
+  hitSoundGain: 0.5
 --- !u!114 &4262550430560002285
 MonoBehaviour:
   m_ObjectHideFlags: 0

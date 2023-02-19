@@ -122,7 +122,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 145462778613387453, guid: 00ec8ba4d58986e4cab8eba6bfabcca2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 29.014008
+      value: 29.014038
       objectReference: {fileID: 0}
     - target: {fileID: 145462778613387453, guid: 00ec8ba4d58986e4cab8eba6bfabcca2, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -246,6 +246,10 @@ PrefabInstance:
       propertyPath: defaultWeapon
       value: 
       objectReference: {fileID: 11400000, guid: a331797bf7c304d98a20777bfcdef711, type: 2}
+    - target: {fileID: 44255204170505159, guid: 1579f164f55d61b439ac853ddbf63ee4, type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1145306597321544553, guid: 1579f164f55d61b439ac853ddbf63ee4, type: 3}
       propertyPath: acceptanceRadius
       value: 0.1
@@ -328,6 +332,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1579f164f55d61b439ac853ddbf63ee4, type: 3}
+--- !u!1 &2451658395597313160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1780477772311795033, guid: 1579f164f55d61b439ac853ddbf63ee4, type: 3}
+  m_PrefabInstance: {fileID: 4229879832473829841}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1853449226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2451658395597313160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b273eb60aed42d28c611ab2b7b3806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitSound: {fileID: 8300000, guid: c8499f37897514ca99a8ecc233bf34fb, type: 3}
+  whichInport: 2
+  hitSoundGain: 0.5
 --- !u!4 &6103657697422756128 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7928306895965079793, guid: 1579f164f55d61b439ac853ddbf63ee4, type: 3}

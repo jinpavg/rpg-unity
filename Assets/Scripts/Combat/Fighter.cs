@@ -3,6 +3,7 @@ using RPG.Movement;
 using RPG.Core;
 using System;
 using RPG.Saving;
+using RPG.Audio;
 
 namespace RPG.Combat
 {
@@ -73,6 +74,10 @@ namespace RPG.Combat
             else
             {
                 target.TakeDamage(currentWeapon.GetDamage());
+                if (GetComponent<CombatAudio>() != null)
+                {
+                    GetComponent<CombatAudio>().PlayImpactSound();
+                }
             }
         }
 

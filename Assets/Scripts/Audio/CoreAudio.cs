@@ -24,6 +24,7 @@ namespace RPG.Audio
             helper.SetParamValue(4, 400); // setting initial metro
             //helper.SetParamValue(20, 1); // setting delayL to 1 (overriden by bulb)
             //helper.SetParamValue(22, 1); // setting delayR to 1 (overriden by bulb)
+            helper.SetParamValue(10, 0); // start with no waveshape
             helper.SetParamValue(8, 1); // stringsync
             helper.SetParamValue(15, 1); // rotate
             helper.SetParamValue(21, 1); // loop sample
