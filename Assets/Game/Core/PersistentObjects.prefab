@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 8300000, guid: caf35e1c2bf9b4e10bf344160076f786, type: 3}
+  loadingScreen: {fileID: 8300000, guid: 86b08aa82e69f4f07ad45ccfa6a9d24c, type: 3}
 --- !u!1 &3934106093282020663
 GameObject:
   m_ObjectHideFlags: 0

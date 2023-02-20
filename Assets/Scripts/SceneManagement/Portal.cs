@@ -51,7 +51,7 @@ namespace RPG.SceneManagement
 
             // load current level
             wrapper.Load();
-
+            //yield return new WaitForEndOfFrame();
             Portal otherPortal = GetOtherPortal();
             UpdatePlayer(otherPortal);
             

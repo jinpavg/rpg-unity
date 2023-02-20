@@ -2,6 +2,7 @@ using UnityEngine;
 using RPG.Saving;
 using RPG.Control;
 using RPG.Audio; // this is a hack, there should be an event
+using RPG.Core; // again, we need an OnPlayerDeath event
 
 namespace RPG.Core
 {
@@ -10,6 +11,7 @@ namespace RPG.Core
         [SerializeField] float healthPoints = 100f;
         // temporary maxHealthPoints to be rewritten by stats
         [SerializeField] float maxHealthPoints = 100f;
+        [SerializeField] GameObject deathScreenPrefab = null;
 
         bool isDead = false;
         
@@ -52,6 +54,12 @@ namespace RPG.Core
             GetComponentInChildren<Animator>().SetTrigger("die");
             GetComponent<ActionScheduler>().CancelCurrentAction();
             GetComponent<CombatAudio>().PlayDeathSound();
+            if (gameObject.tag == "Player" && deathScreenPrefab != null)
+            {
+                int whereYouDied = GetComponent<DeathScript>().GetSceneIndex();
+                GameObject deathScreenInstance = Instantiate(deathScreenPrefab);
+                deathScreenInstance.GetComponentInChildren<DeathScreen>().SetDeathLocation(whereYouDied);
+            }
         }
 
         // hack for health pickup
