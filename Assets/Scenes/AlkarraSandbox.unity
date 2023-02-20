@@ -168,7 +168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9169819712724361553, guid: 7f31356b3cbe23547bcd3f1e809e8fb1, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9169819712724361553, guid: 7f31356b3cbe23547bcd3f1e809e8fb1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -227,21 +227,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: LittleBugStabber
       objectReference: {fileID: 0}
-    - target: {fileID: 3205936798084344070, guid: 3a4b3aab299b44f868f2bf0195bb5186, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7139890391235635176, guid: 3a4b3aab299b44f868f2bf0195bb5186, type: 3}
-      propertyPath: healthPoints
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7139890391235635176, guid: 3a4b3aab299b44f868f2bf0195bb5186, type: 3}
-      propertyPath: maxHealthPoints
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 8097814403531742547, guid: 3a4b3aab299b44f868f2bf0195bb5186, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8097814403531742547, guid: 3a4b3aab299b44f868f2bf0195bb5186, type: 3}
       propertyPath: m_LocalPosition.x
@@ -571,7 +559,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4229879830793211608, guid: 024b1deeaf313154eb4bc87c2b85ed08, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4229879830793211608, guid: 024b1deeaf313154eb4bc87c2b85ed08, type: 3}
       propertyPath: m_LocalPosition.x
@@ -636,7 +624,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 2a74037c4fd1e4761bb4931294f04ac6, type: 3}
     - target: {fileID: 6918640966952603213, guid: b5ad04227fbdd4a939425ee78621ebac, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6918640966952603213, guid: b5ad04227fbdd4a939425ee78621ebac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -689,7 +677,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 286001536849780964, guid: 41a1e7062eb2c47f5854575093cdd049, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2978677218644576537, guid: 41a1e7062eb2c47f5854575093cdd049, type: 3}
       propertyPath: m_Name

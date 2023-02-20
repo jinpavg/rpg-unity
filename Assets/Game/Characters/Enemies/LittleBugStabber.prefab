@@ -41,15 +41,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4929640128431088530, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.92
+      value: 75.82
       objectReference: {fileID: 0}
     - target: {fileID: 4929640128431088530, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.0000042915344
       objectReference: {fileID: 0}
     - target: {fileID: 4929640128431088530, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.5225585
+      value: -88.19
       objectReference: {fileID: 0}
     - target: {fileID: 4929640128431088530, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
       propertyPath: m_LocalRotation.w
@@ -78,6 +78,14 @@ PrefabInstance:
     - target: {fileID: 4929640128431088530, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277264323156597033, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
+      propertyPath: healthPoints
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277264323156597033, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
+      propertyPath: maxHealthPoints
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7178078813735681309, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -3,52 +3,38 @@ using UnityEngine.AI;
 
 namespace RPG.Audio
 {
-    // this is not currently working and is disabled on the two active enemies
+    
     public class AIControlledAudio : MonoBehaviour 
     {
-        const int bugfootKey = 4;
-        BugFootHelper bugfootHelper;
+        AudioSource footFallSource;
+        bool shouldAllowPlay;
 
         private void Start() 
         {
-            bugfootHelper = BugFootHelper.FindById(bugfootKey);
-            
-            FootfallOn(1f);
-            FootfallRate(140f);
+            //Fetch the AudioSource from the GameObject
+            footFallSource = GetComponent<AudioSource>();
 
         }
 
         private void Update()
         {
-
             Vector3 bugVelocity = GetComponent<NavMeshAgent>().velocity;
-
-            if (bugVelocity.magnitude > 0)
+            bool isMoving = bugVelocity.magnitude > 0;
+            if (isMoving && shouldAllowPlay)
             {
-                FootfallGain(0.7f);
+                Debug.Log("bug");
+                footFallSource.Play();
+                shouldAllowPlay = false;
             }
-            else
+            else if (!isMoving)
             {
-                FootfallGain(0f);
+                footFallSource.Stop();
+                shouldAllowPlay = true;
             }
 
 
         }
 
-        public void FootfallOn(float isMoving)
-        {
-            bugfootHelper.SetParamValue(0, isMoving);
-        }
-
-        public void FootfallGain(float gain)
-        {
-            bugfootHelper.SetParamValue(3, gain);
-        }
-
-        public void FootfallRate(float rate)
-        {
-            bugfootHelper.SetParamValue(1, rate);
-        }
 
     }
 }
