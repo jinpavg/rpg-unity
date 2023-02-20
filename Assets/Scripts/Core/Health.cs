@@ -1,6 +1,7 @@
 using UnityEngine;
 using RPG.Saving;
 using RPG.Control;
+using RPG.Audio; // this is a hack, there should be an event
 
 namespace RPG.Core
 {
@@ -50,6 +51,7 @@ namespace RPG.Core
             isDead = true;
             GetComponentInChildren<Animator>().SetTrigger("die");
             GetComponent<ActionScheduler>().CancelCurrentAction();
+            GetComponent<CombatAudio>().PlayDeathSound();
         }
 
         // hack for health pickup

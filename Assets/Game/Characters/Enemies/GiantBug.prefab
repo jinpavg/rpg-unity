@@ -183,8 +183,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSound: {fileID: 8300000, guid: e9938ed82ff5c4f89a1bd8e246aa7884, type: 3}
+  deathSound: {fileID: 8300000, guid: af75fe851684d4e0fac5d1a53f5d2779, type: 3}
   whichInport: 3
   hitSoundGain: 0.5
+  deathSoundGain: 0.5
+  pitchDownFactor: 1
 --- !u!114 &4262550430560002285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,6 +200,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a4bff27a3237644a80f197f064bdd2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1762429555815208903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3664557425215520314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea1783117c6f4d33843814afbb9102f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footfallSound: {fileID: 8300000, guid: 3500bbad8177f48cd878d6dd61febb10, type: 3}
 --- !u!4 &4929640128431088530 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4862414184903099617, guid: c38021190475abf409684a241fb8d826, type: 3}

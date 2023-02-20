@@ -350,8 +350,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSound: {fileID: 8300000, guid: c8499f37897514ca99a8ecc233bf34fb, type: 3}
+  deathSound: {fileID: 8300000, guid: fe8fbafe23e6049d6a12b0ec4eae93f8, type: 3}
   whichInport: 2
   hitSoundGain: 0.5
+  deathSoundGain: 0.5
+  pitchDownFactor: 1
 --- !u!4 &6103657697422756128 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7928306895965079793, guid: 1579f164f55d61b439ac853ddbf63ee4, type: 3}

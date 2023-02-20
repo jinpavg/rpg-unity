@@ -44,12 +44,6 @@ namespace RPG.Audio
 
 
         }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
     }
 }
 
