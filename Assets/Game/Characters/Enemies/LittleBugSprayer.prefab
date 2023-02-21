@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 491931740711272699, guid: 3a4b3aab299b44f868f2bf0195bb5186, type: 3}
       propertyPath: m_Name
-      value: 'LittleBugSprayer '
+      value: LittleBugSprayer
       objectReference: {fileID: 0}
     - target: {fileID: 1261786480146728651, guid: 3a4b3aab299b44f868f2bf0195bb5186, type: 3}
       propertyPath: maxSpeed
@@ -33,7 +33,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4249900005193398262, guid: 3a4b3aab299b44f868f2bf0195bb5186, type: 3}
       propertyPath: chaseDistance
-      value: 5
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4249900005193398262, guid: 3a4b3aab299b44f868f2bf0195bb5186, type: 3}
+      propertyPath: patrolSpeedFraction
+      value: 0.383
       objectReference: {fileID: 0}
     - target: {fileID: 6310957572548494300, guid: 3a4b3aab299b44f868f2bf0195bb5186, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -41,11 +45,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: eb8fac8d0552e3f499a0eca1d3932a07, type: 2}
     - target: {fileID: 7139890391235635176, guid: 3a4b3aab299b44f868f2bf0195bb5186, type: 3}
       propertyPath: healthPoints
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7139890391235635176, guid: 3a4b3aab299b44f868f2bf0195bb5186, type: 3}
       propertyPath: maxHealthPoints
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8097814403531742547, guid: 3a4b3aab299b44f868f2bf0195bb5186, type: 3}
       propertyPath: m_RootOrder

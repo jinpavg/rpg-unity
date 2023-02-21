@@ -24,6 +24,7 @@ namespace RPG.Audio
         Transform thirdFromBottomCube;
         Transform fourthFromBottomCube;
         Transform topCube;
+        //Transform travelSphere;
         //float rotationSpeed = 0.1f;
 
 
@@ -37,6 +38,7 @@ namespace RPG.Audio
             thirdFromBottomCube = gameObject.transform.GetChild(2);
             fourthFromBottomCube = gameObject.transform.GetChild(3);
             topCube = gameObject.transform.GetChild(4);
+            //travelSphere = gameObject.transform.GetChild(5);
 
             //lfoLFO is off. i like it, but it causes glitches, need to change the scale from 0 1 3 10 to 0 1 0.01 0.1 or something (see RNBO patch)
             orbsHelper.SetParamValue(3, 0);
@@ -51,17 +53,22 @@ namespace RPG.Audio
             orbsHelper.GetParamValueNormalized(9, out harmonicsLFOValue);
             bottomCube.Rotate(new Vector3 (0, 360 * (float)harmonicsLFOValue, 0));
 
-            orbsHelper.GetParamValueNormalized(0, out cutoffValue);
-            secondFromBottomCube.Rotate(new Vector3 (0, 360 * (float)cutoffValue, 0));
-
             orbsHelper.GetParamValueNormalized(17, out leftDelayValue);
-            thirdFromBottomCube.Rotate(new Vector3 (0, 360 * (float)leftDelayValue, 0));
+            secondFromBottomCube.Rotate(new Vector3 (0, 360 * (float)leftDelayValue, 0));
+
+            thirdFromBottomCube.Rotate(new Vector3 (0, -360 * (float)leftDelayValue, 0));
 
             orbsHelper.GetParamValueNormalized(19, out rightDelayValue);
             fourthFromBottomCube.Rotate(new Vector3 (0, 360 * (float)rightDelayValue, 0));
 
-            orbsHelper.GetParamValueNormalized(2, out overblowValue);
-            topCube.Rotate(new Vector3 (0, 360 * (float)overblowValue, 0));
+            //orbsHelper.GetParamValueNormalized(2, out overblowValue);
+            topCube.Rotate(new Vector3 (0, -360 * (float)harmonicsLFOValue, 0));
+
+            //orbsHelper.GetParamValueNormalized(0, out cutoffValue);
+            //float scaledHarmonic = (float)harmonicsLFOValue * 2f - 1f;
+            //Vector3 travelSpherePosition = new Vector3 (0, (float)cutoffValue * 2.7f, 0);
+            //travelSphere.Translate(Vector3.up * scaledHarmonic / 1000f);
+            
         }
 
         private IEnumerator RaiseBulbGain(float time)

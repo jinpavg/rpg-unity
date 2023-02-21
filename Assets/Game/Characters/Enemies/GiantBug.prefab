@@ -109,11 +109,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5768557796834836058, guid: c38021190475abf409684a241fb8d826, type: 3}
       propertyPath: healthPoints
-      value: 500
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5768557796834836058, guid: c38021190475abf409684a241fb8d826, type: 3}
       propertyPath: maxHealthPoints
-      value: 500
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c38021190475abf409684a241fb8d826, type: 3}

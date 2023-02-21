@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1076926930849351991, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
+      propertyPath: patrolSpeedFraction
+      value: 0.404
+      objectReference: {fileID: 0}
     - target: {fileID: 1307843981043770031, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
       propertyPath: uniqueIdentifier
       value: 6b0ea2df-2b0f-4e22-9698-17f26a31d3cb
@@ -14,6 +18,10 @@ PrefabInstance:
     - target: {fileID: 2705091905592571914, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
       propertyPath: maxSpeed
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2705091905592571917, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3094994760040558756, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
       propertyPath: defaultWeapon
@@ -81,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6277264323156597033, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
       propertyPath: healthPoints
-      value: 15
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6277264323156597033, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
       propertyPath: maxHealthPoints
