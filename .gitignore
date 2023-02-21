@@ -76,3 +76,6 @@ mono_crash*.json
 #NuGet
 /NuGet/
 
+#VSCode
+.vsconfig
+/.vscode
