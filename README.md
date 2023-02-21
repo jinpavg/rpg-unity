@@ -28,7 +28,7 @@ Design Pillar: Combat and exploration RPG that highlight the sound of the world
 
 Remarkability: Generative audio integrated with gameplay and VFX
 
-Anticipated Steam Early Access Launch date: Feb 23 RNBO event
+Anticipated early access launch date: Feb 23 RNBO event
 
 Feature Development Priorities:
 
@@ -37,20 +37,6 @@ Feature Development Priorities:
 - required RPG abilities and stats (upgradeable)
 - level building and game progression
 
-Reference Games: Diablo 3 (gameplay), The Last of us 2 (guitar), no man's sky (aesthetic)
-
-Asset Store resources:
-
-paid:
-[Alien Planets Vol.2 | 3D Sci-Fi | Unity Asset Store](https://assetstore.unity.com/packages/3d/environments/sci-fi/alien-planets-vol-2-85080#description)
-[LOW POLY - Alien Environment - 05 | 3D Environments | Unity Asset Store](https://assetstore.unity.com/packages/3d/environments/low-poly-alien-environment-05-213737)
-[LOW POLY - Alien Bug | 3D Creatures | Unity Asset Store](https://assetstore.unity.com/packages/3d/characters/creatures/low-poly-alien-bug-209812#description)
-[Low Poly Character - Monster Creature 1 - Fantasy RPG | 3D Creatures | Unity Asset Store](https://assetstore.unity.com/packages/3d/characters/creatures/low-poly-character-monster-creature-1-fantasy-rpg-183692)
-
-free: 
-[Unity Asset Store - The Best Assets for Game Making](https://assetstore.unity.com/?category=3d%2Fenvironments&free=true&orderBy=1)
-[Lowpoly Environment - Nature Pack Free | 3D Environments | Unity Asset Store](https://assetstore.unity.com/packages/3d/environments/lowpoly-environment-nature-pack-free-187052)[Simple Forest Pack | 3D Environments | Unity Asset Store](https://assetstore.unity.com/packages/3d/environments/simple-forest-pack-209273)
-[Low poly alien world | 3D Environments | Unity Asset Store](https://assetstore.unity.com/packages/3d/environments/low-poly-alien-world-132329)
-[Translucent Crystals | 3D Fantasy | Unity Asset Store](https://assetstore.unity.com/packages/3d/environments/fantasy/translucent-crystals-106274)
+Reference Games: Diablo 3 (gameplay), The Last of us 2 (guitar), no man's sky (aesthetic), Omno (world and storytelling)
 
 
