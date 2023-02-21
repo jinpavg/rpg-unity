@@ -79,3 +79,4 @@ mono_crash*.json
 #VSCode
 .vsconfig
 /.vscode
+omnisharp.json
