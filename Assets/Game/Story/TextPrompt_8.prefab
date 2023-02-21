@@ -1,16 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6574297250521347656
+--- !u!1001 &5151504566241030083
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 219180109730920372, guid: 11b897df12d3040739d787539707d9a5, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8720755085417976329, guid: 11b897df12d3040739d787539707d9a5, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -97,23 +93,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8720755085417976437, guid: 11b897df12d3040739d787539707d9a5, type: 3}
       propertyPath: m_Name
-      value: TextPrompt_6
+      value: TextPrompt_8
       objectReference: {fileID: 0}
     - target: {fileID: 8720755085634832241, guid: 11b897df12d3040739d787539707d9a5, type: 3}
       propertyPath: m_Text
-      value: 'The radio dropsite should be nearby... '
-      objectReference: {fileID: 0}
-    - target: {fileID: 8720755085739298590, guid: 11b897df12d3040739d787539707d9a5, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 223.2476
-      objectReference: {fileID: 0}
-    - target: {fileID: 8720755085739298590, guid: 11b897df12d3040739d787539707d9a5, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 39.402
-      objectReference: {fileID: 0}
-    - target: {fileID: 8720755085739298590, guid: 11b897df12d3040739d787539707d9a5, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 3.3543
+      value: A new power... Could I throw this to protect me?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11b897df12d3040739d787539707d9a5, type: 3}

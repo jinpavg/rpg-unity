@@ -97,10 +97,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8720755085634832241, guid: 11b897df12d3040739d787539707d9a5, type: 3}
       propertyPath: m_Text
-      value: 'Apparently the radio dropsite is beyond these mountains.
-
-        I
-        need to find a way through...'
+      value: Apparently the radio dropsite is beyond these mountains. I need to find
+        a way through...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11b897df12d3040739d787539707d9a5, type: 3}

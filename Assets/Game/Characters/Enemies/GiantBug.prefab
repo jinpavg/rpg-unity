@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3bfaa1f835739643a5f9086901baddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseDistance: 10
+  chaseDistance: 15
   suspicionTime: 5
   aggroCooldownTime: 10
   patrolPath: {fileID: 0}

@@ -224,6 +224,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2111715842}
     m_Modifications:
     - target: {fileID: 1906490989265970780, guid: 884e8f88602d1446084fa81131526c5e, type: 3}
+      propertyPath: storyDisplayTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1906490989265970780, guid: 884e8f88602d1446084fa81131526c5e, type: 3}
       propertyPath: textPromptPrefab
       value: 
       objectReference: {fileID: 719664162382401467, guid: cb20239bd223f45f2af8868399e20259, type: 3}
@@ -556,6 +560,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Core
       objectReference: {fileID: 0}
+    - target: {fileID: 4229879830810863050, guid: 024b1deeaf313154eb4bc87c2b85ed08, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 106.89989
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229879830810863050, guid: 024b1deeaf313154eb4bc87c2b85ed08, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.0185966
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229879831518010715, guid: 024b1deeaf313154eb4bc87c2b85ed08, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 106.89989
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229879831518010715, guid: 024b1deeaf313154eb4bc87c2b85ed08, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.0185966
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170210879897629595, guid: 024b1deeaf313154eb4bc87c2b85ed08, type: 3}
+      propertyPath: healthPoints
+      value: 99
+      objectReference: {fileID: 0}
     - target: {fileID: 6103657697422756128, guid: 024b1deeaf313154eb4bc87c2b85ed08, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0
@@ -712,7 +736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3125301054773636807, guid: 836df510fec9c416b98fe75ca68fa807, type: 3}
       propertyPath: storyDisplayTime
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3125301054773636807, guid: 836df510fec9c416b98fe75ca68fa807, type: 3}
       propertyPath: textPromptPrefab

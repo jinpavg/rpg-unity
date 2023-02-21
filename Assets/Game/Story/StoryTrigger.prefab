@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textPromptPrefab: {fileID: 719664162382401467, guid: cb20239bd223f45f2af8868399e20259, type: 3}
-  storyDisplayTime: 3
+  storyDisplayTime: 10
 --- !u!114 &3125301054019068062
 MonoBehaviour:
   m_ObjectHideFlags: 0

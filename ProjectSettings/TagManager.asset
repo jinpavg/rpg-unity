@@ -6,6 +6,7 @@ TagManager:
   tags:
   - AudioHelper
   - SceneFader
+  - BigBad
   layers:
   - Default
   - TransparentFX
