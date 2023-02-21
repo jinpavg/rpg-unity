@@ -53,7 +53,7 @@ MonoBehaviour:
   isHoming: 1
   hitEffect: {fileID: 2302457091093092515, guid: 69d1b1037536b504884c93bb73d662db, type: 3}
   maxLifeTime: 4
-  lifeAfterImpact: 0.2
+  lifeAfterImpact: 1
   destroyOnHit:
   - {fileID: 7560786105358131072}
 --- !u!65 &3003335756676309571

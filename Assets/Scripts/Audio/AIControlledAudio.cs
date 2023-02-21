@@ -22,7 +22,6 @@ namespace RPG.Audio
             bool isMoving = bugVelocity.magnitude > 0;
             if (isMoving && shouldAllowPlay)
             {
-                Debug.Log("bug");
                 footFallSource.Play();
                 shouldAllowPlay = false;
             }
