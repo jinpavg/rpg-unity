@@ -1,8 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using RPG.SceneManagement;
+using RPG.Control;
 
 namespace RPG.Core
 {
@@ -11,11 +11,14 @@ namespace RPG.Core
         int sceneToLoad = 1;
         [SerializeField] float fadeInTime = 5;
         [SerializeField] float fadeOutTime = 5;
-        [SerializeField] float fadeWaitTime = 1;
+        [SerializeField] float fadeWaitTime = 4;
         LoadFader fader;
+        //bool hasBeenTriggered = false;
+        GameObject player;
 
         IEnumerator Start() 
         {
+            // player = GameObject.FindWithTag("Player");
             fader = GetComponentInChildren<LoadFader>();
             yield return fader.FadeOut(fadeOutTime);
         }
@@ -33,6 +36,8 @@ namespace RPG.Core
 
         private IEnumerator Transition()
         {
+            //hasBeenTriggered = true;
+
             if (sceneToLoad < 0)
             {
                 Debug.LogError("Scene to load not set.");
@@ -50,10 +55,29 @@ namespace RPG.Core
             // load current level
             wrapper.Load();
             
+            player = GameObject.FindWithTag("Player");
+            yield return DisableControl();
+
             yield return new WaitForSeconds(fadeWaitTime);
+
             yield return fader.FadeIn(fadeInTime);
 
+            yield return EnableControl();
+   
             Destroy(gameObject);
+        }
+
+        IEnumerator DisableControl()
+        {
+            player.GetComponent<ActionScheduler>().CancelCurrentAction(); 
+            player.GetComponent<PlayerController>().enabled = false;
+            yield return null;
+        }
+
+        IEnumerator EnableControl()
+        {
+            player.GetComponent<PlayerController>().enabled = true;
+            yield return null;
         }
     }
 }

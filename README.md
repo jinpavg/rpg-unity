@@ -1,6 +1,8 @@
 # The Song of Alkarra Three
 *Diablo in Space with live Blade Runner Synths*
 
+![Alkarra Icon](/Assets/alkarra_icon.jpg)
+
 Genre:  3rd person action RPG with in-game synthesis, fixed-camera
 Target Audience: 13+, fans of old school RPGs and people who dig synths
 
@@ -24,7 +26,7 @@ Core Player Experience: The player should feel like an explorer, thrilling and 
 
 Central Story Theme: Explorer discovering their power
 
-Design Pillar: Combat and exploration RPG that highlight the sound of the world
+Design Pillar: Combat and exploration RPG that highlights the sound of the world
 
 Remarkability: Generative audio integrated with gameplay and VFX
 
