@@ -164,7 +164,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: faffddbc44a4d49d4b6b07b6b9d72d2c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.887
-  m_Pitch: -0.15
+  m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -263,9 +263,10 @@ MonoBehaviour:
   suspicionTime: 5
   aggroCooldownTime: 10
   patrolPath: {fileID: 0}
-  waypointTolerance: 1
+  waypointTolerance: 2.5
   waypointDwellTime: 5
   patrolSpeedFraction: 0.2
+  shoutDistance: 5
 --- !u!114 &1403266549569866063
 MonoBehaviour:
   m_ObjectHideFlags: 0

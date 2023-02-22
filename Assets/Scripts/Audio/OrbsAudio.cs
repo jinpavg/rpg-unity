@@ -6,8 +6,12 @@ namespace RPG.Audio
 {
     public class OrbsAudio : MonoBehaviour
     {
+        const int pluginKey = 1;
         const int orbsKey = 2;
+        AlkarraSoundHelper helper;
         AlkarraOrbsHelper orbsHelper;
+        System.UInt32 sampleThreeInport;
+
         GameObject player;
         float orbsGain = 0;
         [SerializeField] float fadeInTime = 3;
@@ -32,6 +36,7 @@ namespace RPG.Audio
         void Start()
         {
             orbsHelper = AlkarraOrbsHelper.FindById(orbsKey);
+            helper = AlkarraSoundHelper.FindById(pluginKey);
             player = GameObject.FindWithTag("Player");
             bottomCube = gameObject.transform.GetChild(0);
             secondFromBottomCube = gameObject.transform.GetChild(1);
@@ -51,24 +56,32 @@ namespace RPG.Audio
         {
             // i could extract a method here
             orbsHelper.GetParamValueNormalized(9, out harmonicsLFOValue);
-            bottomCube.Rotate(new Vector3 (0, 360 * (float)harmonicsLFOValue, 0));
+            bottomCube.Rotate(new Vector3(0, 360 * (float)harmonicsLFOValue, 0));
 
             orbsHelper.GetParamValueNormalized(17, out leftDelayValue);
-            secondFromBottomCube.Rotate(new Vector3 (0, 360 * (float)leftDelayValue, 0));
+            secondFromBottomCube.Rotate(new Vector3(0, 360 * (float)leftDelayValue, 0));
 
-            thirdFromBottomCube.Rotate(new Vector3 (0, -360 * (float)leftDelayValue, 0));
+            thirdFromBottomCube.Rotate(new Vector3(0, -360 * (float)leftDelayValue, 0));
 
             orbsHelper.GetParamValueNormalized(19, out rightDelayValue);
-            fourthFromBottomCube.Rotate(new Vector3 (0, 360 * (float)rightDelayValue, 0));
+            fourthFromBottomCube.Rotate(new Vector3(0, 360 * (float)rightDelayValue, 0));
 
             //orbsHelper.GetParamValueNormalized(2, out overblowValue);
-            topCube.Rotate(new Vector3 (0, -360 * (float)harmonicsLFOValue, 0));
+            topCube.Rotate(new Vector3(0, -360 * (float)harmonicsLFOValue, 0));
 
             //orbsHelper.GetParamValueNormalized(0, out cutoffValue);
             //float scaledHarmonic = (float)harmonicsLFOValue * 2f - 1f;
             //Vector3 travelSpherePosition = new Vector3 (0, (float)cutoffValue * 2.7f, 0);
             //travelSphere.Translate(Vector3.up * scaledHarmonic / 1000f);
-            
+
+        }
+
+        // requires that a sample has already been loaded into the sampleThree buffer elsewhere
+        public void AddHealthSound()
+        {
+            helper.SetParamValue(27, 0.4); // slow down sampleThree
+            sampleThreeInport = AlkarraSoundHelper.Tag("playSampleThree");
+            helper.SendMessage(sampleThreeInport, 1);
         }
 
         private IEnumerator RaiseBulbGain(float time)
@@ -91,8 +104,9 @@ namespace RPG.Audio
         }
 
 
-        void OnTriggerEnter(Collider other) {
-            
+        void OnTriggerEnter(Collider other)
+        {
+
             if (other.gameObject == player)
             {
                 StartCoroutine(RaiseBulbGain(fadeInTime));
@@ -100,7 +114,8 @@ namespace RPG.Audio
                 //orbsHelper.SetParamValue(5, 0.4); // orbs sound
             }
         }
-        void OnTriggerExit(Collider other) {
+        void OnTriggerExit(Collider other)
+        {
             if (other.gameObject == player)
             {
                 StartCoroutine(LowerBulbGain(fadeOutTime));

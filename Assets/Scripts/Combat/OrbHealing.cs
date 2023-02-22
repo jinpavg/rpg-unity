@@ -16,7 +16,7 @@ namespace RPG.Combat
             if (other.tag == "Player")
             {
                 other.GetComponent<Health>().Heal(healthToRestore);
-                //GetComponent<BulbAudio>().AddHealthSound();
+                GetComponent<OrbsAudio>().AddHealthSound();
                 //StartCoroutine(HideForSeconds(respawnTime));
             }
         }
