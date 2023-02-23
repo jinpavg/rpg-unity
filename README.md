@@ -4,6 +4,7 @@
 ![Alkarra Icon](/Assets/alkarra_icon.jpg)
 
 Genre:  3rd person action RPG with in-game synthesis, fixed-camera
+
 Target Audience: 13+, fans of old school RPGs and people who dig synths
 
 Controls: Mouse and keyboard (and controller?)
