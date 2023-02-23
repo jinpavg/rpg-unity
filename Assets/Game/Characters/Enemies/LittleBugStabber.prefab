@@ -39,6 +39,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LittleBugStabber
       objectReference: {fileID: 0}
+    - target: {fileID: 3664557425215520314, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4929640128431088530, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
       propertyPath: m_RootOrder
       value: 0

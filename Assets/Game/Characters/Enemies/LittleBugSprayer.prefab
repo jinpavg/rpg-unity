@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LittleBugSprayer
       objectReference: {fileID: 0}
+    - target: {fileID: 491931740711272699, guid: 3a4b3aab299b44f868f2bf0195bb5186, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 1261786480146728651, guid: 3a4b3aab299b44f868f2bf0195bb5186, type: 3}
       propertyPath: maxSpeed
       value: 4

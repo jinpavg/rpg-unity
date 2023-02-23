@@ -1,4 +1,5 @@
 using UnityEngine;
+using RPG.Control;
 
 namespace RPG.Core
 {
@@ -12,6 +13,7 @@ namespace RPG.Core
             if (other.gameObject.tag == "Player")
             {
                 Instantiate(victoryScreenPrefab);
+                GetComponent<VictoryControlRemover>().DisableControl();
             }
             
         }
