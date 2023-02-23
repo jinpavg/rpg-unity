@@ -8,7 +8,7 @@ namespace RPG.Core
 {
     public class TitleScreen : MonoBehaviour
     {
-        int sceneToLoad = 1;
+        const int sceneToLoad = 1;
         [SerializeField] float fadeInTime = 5;
         [SerializeField] float fadeOutTime = 5;
         [SerializeField] float fadeWaitTime = 1;
@@ -30,11 +30,11 @@ namespace RPG.Core
 
         private IEnumerator Transition()
         {
-            if (sceneToLoad < 0)
-            {
-                Debug.LogError("Scene to load not set.");
-                yield break;
-            }
+            // if (sceneToLoad < 0)
+            // {
+            //     Debug.LogError("Scene to load not set.");
+            //     yield break;
+            // }
 
             DontDestroyOnLoad(gameObject);
 
@@ -50,7 +50,7 @@ namespace RPG.Core
 
             // load current level
             wrapper.Load();
-            
+
 //            wrapper.Save();
             
             yield return new WaitForSeconds(fadeWaitTime);

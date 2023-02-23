@@ -10,13 +10,15 @@ namespace RPG.Combat
     
     public class OrbHealing : MonoBehaviour {
         [SerializeField] float healthToRestore = 200;
+        [SerializeField] GameObject healthEffect = null;
         //[SerializeField] float respawnTime = 10;
 
         private void OnTriggerEnter(Collider other) {
-            if (other.tag == "Player")
+            if (other.tag == "Player" && other.GetComponent<Health>().healthPoints < other.GetComponent<Health>().maxHealthPoints)
             {
                 other.GetComponent<Health>().Heal(healthToRestore);
                 GetComponent<OrbsAudio>().AddHealthSound();
+                Instantiate(healthEffect, other.transform.position, other.transform.rotation);
                 //StartCoroutine(HideForSeconds(respawnTime));
             }
         }

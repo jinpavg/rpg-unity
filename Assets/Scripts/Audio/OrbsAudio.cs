@@ -13,9 +13,10 @@ namespace RPG.Audio
         System.UInt32 sampleThreeInport;
 
         GameObject player;
-        float orbsGain = 0;
+        double orbsGain;
         [SerializeField] float fadeInTime = 3;
         [SerializeField] float fadeOutTime = 3;
+        [SerializeField] float targetGainHigh = 0.5f;
 
         double harmonicsLFOValue;
         double cutoffValue;
@@ -30,6 +31,8 @@ namespace RPG.Audio
         Transform topCube;
         //Transform travelSphere;
         //float rotationSpeed = 0.1f;
+
+        Coroutine currentActiveFade = null;
 
 
         // Start is called before the first frame update
@@ -49,7 +52,8 @@ namespace RPG.Audio
             orbsHelper.SetParamValue(3, 0);
             orbsHelper.SetParamValue(9, 0.1); // harmonicLFO
 
-
+            orbsHelper.SetParamValue(5, 0); // be extra sure orbs are off
+            orbsHelper.GetParamValue(5, out orbsGain);
         }
 
         void Update()
@@ -84,24 +88,38 @@ namespace RPG.Audio
             helper.SendMessage(sampleThreeInport, 1);
         }
 
-        private IEnumerator RaiseBulbGain(float time)
+
+        public IEnumerator FadeGainIn(float time)
         {
-            while (orbsGain < 0.7f)
+            return Fade(targetGainHigh, time);
+        }
+
+        public IEnumerator FadeGainOut(float time)
+        {
+            return Fade(0, time);
+        }
+
+
+        public IEnumerator Fade(float target, float time)
+        {
+            if (currentActiveFade != null)
             {
-                orbsGain += Time.deltaTime / time;
+                StopCoroutine(currentActiveFade);
+            }
+            currentActiveFade = StartCoroutine(FadeRoutine(target, time));
+            yield return currentActiveFade;
+        }
+
+        private IEnumerator FadeRoutine(float target, float time)
+        {
+            while (!Mathf.Approximately((float)orbsGain, target))
+            {
+                orbsGain = Mathf.MoveTowards((float)orbsGain, target, Time.deltaTime / time);
                 orbsHelper.SetParamValue(5, orbsGain);
                 yield return null;
             }
         }
-        private IEnumerator LowerBulbGain(float time)
-        {
-            while (orbsGain > 0f)
-            {
-                orbsGain -= Time.deltaTime / time;
-                orbsHelper.SetParamValue(5, orbsGain);
-                yield return null;
-            }
-        }
+
 
 
         void OnTriggerEnter(Collider other)
@@ -109,7 +127,7 @@ namespace RPG.Audio
 
             if (other.gameObject == player)
             {
-                StartCoroutine(RaiseBulbGain(fadeInTime));
+                StartCoroutine(FadeGainIn(fadeInTime));
 
                 //orbsHelper.SetParamValue(5, 0.4); // orbs sound
             }
@@ -118,7 +136,7 @@ namespace RPG.Audio
         {
             if (other.gameObject == player)
             {
-                StartCoroutine(LowerBulbGain(fadeOutTime));
+                StartCoroutine(FadeGainOut(fadeOutTime));
                 //orbsHelper.SetParamValue(5, 0); // no orbs sound
             }
         }

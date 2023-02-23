@@ -3,14 +3,16 @@ using RPG.Saving;
 using RPG.Control;
 using RPG.Audio; // this is a hack, there should be an event
 using RPG.Core; // again, we need an OnPlayerDeath event
+using RPG.Combat; // see the above
 
 namespace RPG.Core
 {
     public class Health : MonoBehaviour, ISaveable
     {
-        [SerializeField] float healthPoints = 100f;
+        // temporary public variable to be rewritten by stats
+        [SerializeField] public float healthPoints = 100f;
         // temporary maxHealthPoints to be rewritten by stats
-        [SerializeField] float maxHealthPoints = 100f;
+        [SerializeField] public float maxHealthPoints = 100f;
         [SerializeField] GameObject deathScreenPrefab = null;
 
         bool isDead = false;
@@ -54,6 +56,7 @@ namespace RPG.Core
             GetComponentInChildren<Animator>().SetTrigger("die");
             GetComponent<ActionScheduler>().CancelCurrentAction();
             GetComponent<CombatAudio>().PlayDeathSound();
+            GetComponent<DeathEffect>().PlayDeathEffect();
             if (gameObject.tag == "Player" && deathScreenPrefab != null)
             {
                 int whereYouDied = GetComponent<DeathScript>().GetSceneIndex();

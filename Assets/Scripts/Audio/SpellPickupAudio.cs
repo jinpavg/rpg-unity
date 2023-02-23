@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RPG.Combat;
 
 namespace RPG.Audio
 {
@@ -15,13 +16,14 @@ namespace RPG.Audio
         GameObject player;
         bool shouldInteractWithPlayer = false;
         [SerializeField] float startingFreq = 1000;
-        float waveshapeGain = 0;
+        double waveshapeGain;
         [SerializeField] float fadeInTime = 3;
         [SerializeField] float fadeOutTime = 3;
+        [SerializeField] float targetGainHigh = 0.3f;
         [SerializeField] AudioClip spellPickup;
         System.UInt32 sampleOneInport;
 
-
+        Coroutine currentActiveFade = null;
 
         // Start is called before the first frame update
         void Start()
@@ -31,7 +33,8 @@ namespace RPG.Audio
             player = GameObject.FindWithTag("Player");
 
             helper.SetParamValue(9, startingFreq); // set waveshape start freq
-            //helper.SetParamValue(10, 0f); // waveshape gain
+            helper.SetParamValue(10, 0f); // waveshape gain starts off, for sure
+            helper.GetParamValue(10, out waveshapeGain);
 
             if (spellPickup)
             {
@@ -52,6 +55,10 @@ namespace RPG.Audio
             {
                 helper.SetParamValue(7, distanceToBulb * (126 / bulbRadius)); // waveshape metro rate
             }
+            if (GetComponent<SpellPickup>().isHidden)
+            {
+                helper.SetParamValue(10, 0); //drop the waveshape once the crystal is picked up
+            }
 
         }
 
@@ -62,20 +69,34 @@ namespace RPG.Audio
             bufferHelper.SendMessage(sampleOneInport, 1);
         }
 
-        private IEnumerator RaiseWaveshapeGain(float time)
+
+
+        public IEnumerator FadeGainIn(float time)
         {
-            while (waveshapeGain < 0.4f)
-            {
-                waveshapeGain += Time.deltaTime / time;
-                helper.SetParamValue(10, waveshapeGain);
-                yield return null;
-            }
+            return Fade(targetGainHigh, time);
         }
-        private IEnumerator LowerWaveshapeGain(float time)
+
+        public IEnumerator FadeGainOut(float time)
         {
-            while (waveshapeGain > 0f)
+            return Fade(0, time);
+        }
+
+
+        public IEnumerator Fade(float target, float time)
+        {
+            if (currentActiveFade != null)
             {
-                waveshapeGain -= Time.deltaTime / time;
+                StopCoroutine(currentActiveFade);
+            }
+            currentActiveFade = StartCoroutine(FadeRoutine(target, time));
+            yield return currentActiveFade;
+        }
+
+        private IEnumerator FadeRoutine(float target, float time)
+        {
+            while (!Mathf.Approximately((float)waveshapeGain, target))
+            {
+                waveshapeGain = Mathf.MoveTowards((float)waveshapeGain, target, Time.deltaTime / time);
                 helper.SetParamValue(10, waveshapeGain);
                 yield return null;
             }
@@ -87,7 +108,7 @@ namespace RPG.Audio
             if (other.gameObject == player)
             {
                 shouldInteractWithPlayer = true;
-                StartCoroutine(RaiseWaveshapeGain(fadeInTime));
+                StartCoroutine(FadeGainIn(fadeInTime));
             }
 
         }
@@ -96,7 +117,7 @@ namespace RPG.Audio
             if (other.gameObject == player)
             {
                 shouldInteractWithPlayer = false;
-                StartCoroutine(LowerWaveshapeGain(fadeOutTime));
+                StartCoroutine(FadeGainOut(fadeOutTime));
             }
 
 

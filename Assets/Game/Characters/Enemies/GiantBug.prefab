@@ -163,7 +163,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -1732309365765159315, guid: a76f479a649bd484f807466bccc29240, type: 2}
   m_audioClip: {fileID: 8300000, guid: faffddbc44a4d49d4b6b07b6b9d72d2c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.887
+  m_Volume: 0.649
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseDistance: 15
   suspicionTime: 5
-  aggroCooldownTime: 10
+  aggroCooldownTime: 8
   patrolPath: {fileID: 0}
   waypointTolerance: 2.5
   waypointDwellTime: 5
@@ -282,9 +282,22 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: e9938ed82ff5c4f89a1bd8e246aa7884, type: 3}
   deathSound: {fileID: 8300000, guid: af75fe851684d4e0fac5d1a53f5d2779, type: 3}
   whichInport: 3
-  hitSoundGain: 0.5
+  hitSoundGain: 0.4
   deathSoundGain: 0.5
-  pitchDownFactor: 1
+  pitchDownFactor: 0.8
+--- !u!114 &1540192200893573212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3664557425215520314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7600789272a4ea09fc82ceb1806805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathEffectPrefab: {fileID: 9142865920923074680, guid: 9bb5d2f47b90143838b166f73493ab8a, type: 3}
 --- !u!114 &1762429555815208903
 MonoBehaviour:
   m_ObjectHideFlags: 0

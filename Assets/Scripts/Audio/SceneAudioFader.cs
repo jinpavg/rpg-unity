@@ -29,7 +29,7 @@ namespace RPG.Audio
             if (sampleIndex > 1 || sampleIndex < 0) yield break;
             if (sampleIndex == 0)
             {
-                while (loadingScreenGain < 0.5f)
+                while (loadingScreenGain < 0.7f)
                 {
                     loadingScreenGain += Time.deltaTime / time;
                     helper.SetParamValue(26, loadingScreenGain);

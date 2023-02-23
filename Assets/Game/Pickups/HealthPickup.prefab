@@ -4819,6 +4819,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8844591872516223137, guid: add6efce5f507734a92ef6f601a2e834, type: 3}
+      propertyPath: healthEffect
+      value: 
+      objectReference: {fileID: 5447312606400805141, guid: 6959a636c2ec34fa5a861798abdd3dbf, type: 3}
     - target: {fileID: 954387522031721343, guid: add6efce5f507734a92ef6f601a2e834, type: 3}
       propertyPath: m_Name
       value: HealthPickup

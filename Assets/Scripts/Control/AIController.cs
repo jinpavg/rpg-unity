@@ -7,8 +7,8 @@ using RPG.Movement;
 using System;
 
 namespace RPG.Control
-{   
-    public class AIController : MonoBehaviour 
+{
+    public class AIController : MonoBehaviour
     {
         [SerializeField] float chaseDistance = 5f;
         [SerializeField] float suspicionTime = 5f;
@@ -18,7 +18,7 @@ namespace RPG.Control
         [SerializeField] float waypointDwellTime = 5f;
         // [SerializeField] float attackSpeed = 5f;
         // [SerializeField] float patrolSpeed = 2f;
-        [Range(0,1)]
+        [Range(0, 1)]
         [SerializeField] float patrolSpeedFraction = 0.2f;
         [SerializeField] float shoutDistance = 5;
 
@@ -33,8 +33,9 @@ namespace RPG.Control
         float timeSinceArrivedAtWaypoint = Mathf.Infinity;
         float timeSinceAggravated = Mathf.Infinity;
         int currentWaypointIndex = 0;
-    
-        
+        bool hasBeenAggroedRecently = false;
+
+
 
         private void Start()
         {
@@ -68,13 +69,32 @@ namespace RPG.Control
 
             UpdateTimers();
 
+            if (timeSinceAggravated >= aggroCooldownTime && timeSinceLastSawPlayer >= suspicionTime)
+            {
+                hasBeenAggroedRecently = false;
+            }
+
         }
 
         public void Aggravate()
         {
             timeSinceAggravated = 0;
         }
-        
+
+        public void AggroAllies()
+        {
+            {
+                if (hasBeenAggroedRecently == true) { return; }
+
+                if (hasBeenAggroedRecently == false)
+                {
+                    timeSinceAggravated = 0f;
+                    timeSinceLastSawPlayer = 0f;
+                    hasBeenAggroedRecently = true;
+                }
+            }
+        }
+
         private void UpdateTimers()
         {
             timeSinceLastSawPlayer += Time.deltaTime;
@@ -86,7 +106,7 @@ namespace RPG.Control
         {
             //navMeshAgent.speed = patrolSpeed;
             Vector3 nextPosition = guardPosition;
-            
+
 
             if (patrolPath != null)
             {
@@ -101,7 +121,7 @@ namespace RPG.Control
             {
                 mover.StartMoveAction(nextPosition, patrolSpeedFraction);
             }
-            
+
         }
 
         private Vector3 GetCurrentWaypoint()
@@ -118,7 +138,6 @@ namespace RPG.Control
         private void CycleWaypoint()
         {
             currentWaypointIndex = patrolPath.GetNextIndex(currentWaypointIndex);
-            Debug.Log(currentWaypointIndex);
         }
 
         private void SuspicionBehaviour()
@@ -144,7 +163,7 @@ namespace RPG.Control
                 AIController ai = hit.collider.GetComponent<AIController>();
                 if (ai == null) continue;
 
-                ai.Aggravate();
+                ai.AggroAllies();
             }
         }
 
@@ -162,11 +181,13 @@ namespace RPG.Control
         // }
 
         // called by unity
-        private void OnDrawGizmos() {
-            
+        private void OnDrawGizmos()
+        {
+
         }
 
-        private void OnDrawGizmosSelected() {
+        private void OnDrawGizmosSelected()
+        {
             Gizmos.color = Color.blue;
             Gizmos.DrawWireSphere(transform.position, chaseDistance);
         }

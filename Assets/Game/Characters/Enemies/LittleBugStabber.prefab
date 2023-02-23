@@ -15,9 +15,17 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 6b0ea2df-2b0f-4e22-9698-17f26a31d3cb
       objectReference: {fileID: 0}
+    - target: {fileID: 1403266549569866063, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
+      propertyPath: pitchDownFactor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540192200893573212, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
+      propertyPath: deathEffectPrefab
+      value: 
+      objectReference: {fileID: 194062, guid: d0a0161156c6e48a282069e80dfe417a, type: 3}
     - target: {fileID: 2705091905592571914, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
       propertyPath: maxSpeed
-      value: 4
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 2705091905592571917, guid: 360d56ee65a604029a39c17bb8602a68, type: 3}
       propertyPath: m_AngularSpeed

@@ -99,5 +99,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TextPrompt_1
       objectReference: {fileID: 0}
+    - target: {fileID: 8720755085634832241, guid: 11b897df12d3040739d787539707d9a5, type: 3}
+      propertyPath: m_Text
+      value: "Survey log: Day One. \nRough landing on the third moon's surface, \nI
+        don't feel so good..."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11b897df12d3040739d787539707d9a5, type: 3}

@@ -13,6 +13,7 @@ namespace RPG.Combat
         [SerializeField] Transform rightHandTransform = null;
         [SerializeField] Transform leftHandTransform = null;
         [SerializeField] Weapon defaultWeapon = null;
+        [SerializeField] GameObject hitEffect = null;
 
         Health target;
         float timeSinceLastAttack = Mathf.Infinity;
@@ -77,6 +78,10 @@ namespace RPG.Combat
                 if (GetComponent<CombatAudio>() != null)
                 {
                     GetComponent<CombatAudio>().PlayImpactSound();
+                }
+                if (hitEffect != null)
+                {
+                    Instantiate(hitEffect, target.transform);
                 }
             }
         }

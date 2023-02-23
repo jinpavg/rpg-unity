@@ -11,16 +11,29 @@ namespace RPG.Story
     public class StoryTriggerSphere : MonoBehaviour, ISaveable
     {
 
-        bool alreadyTriggered = false;
+        bool entryAlreadyTriggered = false;
+        bool exitAlreadyTriggered = false;
+
+        [SerializeField] GameObject entryTextPromptPrefab = null;
         [SerializeField] GameObject textPromptPrefab = null;
         [SerializeField] float storyDisplayTime = 3;
 
+        private void OnTriggerEnter(Collider other) {
+            if (other.gameObject.tag == "Player" && entryTextPromptPrefab != null && !entryAlreadyTriggered)
+            {
+                GameObject entryTextPromptInstance = Instantiate(entryTextPromptPrefab);
+                StartCoroutine(StoryDialogueFade(entryTextPromptInstance));
+                entryAlreadyTriggered = true;
+            }
+
+        }
+
         private void OnTriggerExit(Collider other) {
-            if (other.gameObject.tag == "Player" && !alreadyTriggered)
+            if (other.gameObject.tag == "Player" && !exitAlreadyTriggered)
             {
                 GameObject textPromptInstance = Instantiate(textPromptPrefab);
                 StartCoroutine(StoryDialogueFade(textPromptInstance));
-                alreadyTriggered = true;
+                exitAlreadyTriggered = true;
             }
             
         }
@@ -37,12 +50,12 @@ namespace RPG.Story
 
         public object CaptureState()
         {
-            return alreadyTriggered;
+            return exitAlreadyTriggered;
         }
 
         public void RestoreState(object state)
         {
-            alreadyTriggered = (bool) state;
+            exitAlreadyTriggered = (bool) state;
         }
     }
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using RPG.Core;
+using RPG.Combat;
 
 namespace RPG.Story
 {
@@ -17,6 +18,7 @@ namespace RPG.Story
             if (bigBad == null) return;
             if (bigBad.GetComponent<Health>().IsDead())
             {
+                GetComponent<DeathEffect>().PlayDeathEffect();
                 Destroy(gameObject);
             }
         }

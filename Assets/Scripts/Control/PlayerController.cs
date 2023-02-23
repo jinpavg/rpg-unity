@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using RPG.Movement;
 using RPG.Combat;
 using RPG.Core;
@@ -37,11 +38,21 @@ namespace RPG.Control
         // Update is called once per frame
         void Update()
         {
-            if (health.IsDead()) return;
+            //if (InteractWithUI()) return;
+            if (health.IsDead()) 
+                {
+                    SetCursor(CursorType.None);
+                    return;
+                }
             if (InteractWithCombat()) return;
             if (InteractWithMovement()) return;
             SetCursor(CursorType.None);
         }
+
+        // private bool InteractWithUI()
+        // {
+        //     return EventSystem.current.IsPointerOverGameObject();
+        // }
 
         private bool InteractWithCombat()
         {
@@ -53,7 +64,7 @@ namespace RPG.Control
                 
                 if (!GetComponent<Fighter>().CanAttack(target.gameObject)) continue;
 
-                if (Input.GetMouseButton(0))
+                if (Input.GetMouseButton(1))
                 {
                     GetComponent<Fighter>().Attack(target.gameObject);
                 }

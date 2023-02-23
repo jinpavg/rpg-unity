@@ -23,9 +23,17 @@ PrefabInstance:
       propertyPath: timeBetweenAttacks
       value: 4.1
       objectReference: {fileID: 0}
+    - target: {fileID: 2402514797393270429, guid: 3a4b3aab299b44f868f2bf0195bb5186, type: 3}
+      propertyPath: deathEffectPrefab
+      value: 
+      objectReference: {fileID: 6971289552916331842, guid: 1a4a41e71dc384d19b83dafe6af5d3dc, type: 3}
     - target: {fileID: 2751360672034413678, guid: 3a4b3aab299b44f868f2bf0195bb5186, type: 3}
       propertyPath: uniqueIdentifier
       value: 7a17807c-b849-45c1-aca3-89a2e83d65d3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842274538046404494, guid: 3a4b3aab299b44f868f2bf0195bb5186, type: 3}
+      propertyPath: pitchDownFactor
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3749438966112966697, guid: 3a4b3aab299b44f868f2bf0195bb5186, type: 3}
       propertyPath: m_Mass
